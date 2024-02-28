@@ -1,0 +1,127 @@
+Шаг 1. Подготовка
+
+* Создайте новый текстовый файл, назовите его "business_card" и сохраните его с расширением .html. 
+Должно получиться "business_card.html".
+
+* Откройте файл и добавьте следующий базовый HTML-код в файл:
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Моя визитка</title>
+    </head>
+    <body>
+    </body>
+</html>
+
+
+
+Шаг 2. Добавление разметки визитки
+
+* Внутри тега <body> добавьте следующую разметку HTML для вашей визитки:
+* При этом амените название аватара "avatar##.jpg" на интересующий вас аватар (см папку images/)
+
+        <div class="card">
+            <img class="avatar" src="images/avatar14.jpg">
+            <div>
+                 <h3>Ваше ФИО</h3>
+                 <p>Ваш статус</p>
+                 <h4>Ваше место учебы</h4>
+            </div>
+        </div>
+
+* Откройте ваш *.html файл с помощью браузера
+
+
+
+Шаг 3. Написание простейшего CSS-кода
+
+* Создайте новый текстовый файл и сохраните его с расширением .css, 
+"styles.css".
+
+* В CSS-файл добавьте следующие базовые правила CSS для визитки:
+
+
+body {
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.avatar {
+    width: 150px;
+}
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+
+Шаг 4. Подключение CSS-файла к HTML
+
+* В HTML-файле, внутри тега <head>, добавьте ссылку на CSS-файл:
+
+
+<head>
+    <title>Моя визитка</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+
+* Обновите ваш HTML-файл в браузере, чтобы увидеть свою визитку.
+
+
+
+Шаг 5. Дополните вашу карточку на ваш вкус (в .css файле):
+* В селекторе .card
+* Примечание: используйте сайт Coolors.co для подбора цвета
+
+* В селекторе body
+
+body {
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #цвет;
+}
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    /*
+    Изменения начинаются здесь.
+    */
+    background: #задний фон;
+    color: #цвет;
+    border-bottom: размер тени снизу px solid #цвет тени;
+    border-radius: выберите размер скругления px;
+}
+
+
+* Обновите страницу и посмотрите результат
+
+
+
+Шаг 6. Добавление базовых эффектов с помощью CSS:
+
+* Добавим эффект тени при наведении на карточку визитки:
+
+.card:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+* Добавим эффект закругленных углов при наведении на изображение аватара:
+
+.avatar:hover {
+    border-radius: 50%;
+}
+
+
